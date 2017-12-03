@@ -1,0 +1,102 @@
+project_name: datautils
+builds:
+  - binary: norm
+    main: ./cmd/norm/main.go
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+  - binary: count
+    main: ./cmd/count/main.go
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+  - binary: rows
+    main: ./cmd/rows/main.go
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+  - binary: text
+    main: ./cmd/text/main.go
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+  - binary: trim
+    main: ./cmd/trim/main.go
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+archive:
+  format: tar.gz
+  format_overrides:
+    - goos: windows
+      format: zip
+  replacements:
+    darwin: macOS
+    linux: Linux
+    windows: Windows
+    amd64: 64-bit
+  files:
+    - CHANGELOG.md
+    - LICENSE
+    - README.md
+    - man/man1/*
+snapshot:
+  name_template: SNAPSHOT-{{.Timestamp}}-{{.Commit}}
+fpm:
+  vendor: Stefan Fischer
+  homepage: https://github.com/sfischer13/datautils
+  maintainer: Stefan Fischer <sfischer13@ymail.com>
+  description: Collection of handy text manipulation tools
+  license: MIT
+  formats:
+    - deb
+    - rpm
+  dependencies:
+    - awk
+    - sed
+  bindir: /usr/local/bin
+snapcraft:
+  name: datautils
+  summary: Collection of handy text manipulation tools
+  description: |
+    The Data Utilities are a collection of handy text manipulation tools.
+    These tools are supposed to make a data wrangler’s life on the command-line easier.
+  grade: devel
+  confinement: strict
+release:
+  github:
+    owner: sfischer13
+    name: datautils
+  draft: true
+  prerelease: true
+  name_template: "{{.ProjectName}}-v{{.Version}}"
+changelog:
+  filters:
+    exclude:
+      - (?i)typo
+  sort: asc
