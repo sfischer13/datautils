@@ -1,0 +1,43 @@
+language: go
+
+go:
+  - 1.8
+  - 1.9
+  - master
+
+sudo: false
+
+matrix:
+  allow_failures:
+    - go: master
+
+dist: trusty
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'ppa:duggan/bats'
+    packages:
+      - bats
+
+before_install:
+  - wget https://github.com/alecthomas/gometalinter/releases/download/v2.0.2/gometalinter-v2.0.2-linux-amd64.tar.bz2
+  - tar xjvf gometalinter-v2.0.2-linux-amd64.tar.bz2
+  - export PATH=$PATH:$PWD/gometalinter-v2.0.2-linux-amd64:$PWD/gometalinter-v2.0.2-linux-amd64/linters
+  - go get github.com/mattn/goveralls
+
+install:
+  - make goget
+
+script:
+  - make checktest
+  - make checkmeta
+  - make checkbats
+
+after_success:
+  - test "$TRAVIS_GO_VERSION" = "1.9" && $GOPATH/bin/goveralls -service=travis-ci
+
+notifications:
+  email:
+    on_failure: always
+    on_success: change
