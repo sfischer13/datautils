@@ -2,6 +2,7 @@ project_name: datautils
 builds:
   - binary: norm
     main: ./cmd/norm/main.go
+    ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}} -X main.goVersion={{.Env.GOVERSION}}
     env:
       - CGO_ENABLED=0
     goos:
@@ -12,6 +13,7 @@ builds:
       - amd64
   - binary: count
     main: ./cmd/count/main.go
+    ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}} -X main.goVersion={{.Env.GOVERSION}}
     env:
       - CGO_ENABLED=0
     goos:
@@ -22,6 +24,7 @@ builds:
       - amd64
   - binary: rows
     main: ./cmd/rows/main.go
+    ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}} -X main.goVersion={{.Env.GOVERSION}}
     env:
       - CGO_ENABLED=0
     goos:
@@ -32,6 +35,7 @@ builds:
       - amd64
   - binary: text
     main: ./cmd/text/main.go
+    ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}} -X main.goVersion={{.Env.GOVERSION}}
     env:
       - CGO_ENABLED=0
     goos:
@@ -42,6 +46,7 @@ builds:
       - amd64
   - binary: trim
     main: ./cmd/trim/main.go
+    ldflags: -s -w -X main.version={{.Version}} -X main.commit={{.Commit}} -X main.date={{.Date}} -X main.goVersion={{.Env.GOVERSION}}
     env:
       - CGO_ENABLED=0
     goos:

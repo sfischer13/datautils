@@ -5,6 +5,7 @@ CMDS = count norm rows text trim
 
 # metadata
 DATE = $(shell date -I)
+GOVERSION = $(shell go version | awk '{print $$3}')
 
 # commands
 MK = mkdir -p
@@ -22,17 +23,17 @@ GZS = $(addsuffix .gz, $(MNS))
 all: show clean man
 
 build:
-	goreleaser --rm-dist
+	GOVERSION=$(GOVERSION) goreleaser --rm-dist
 
 buildclean:
 	$(RM) dist/
 	@echo
 
 buildsnapshot:
-	goreleaser --snapshot --rm-dist
+	GOVERSION=$(GOVERSION) goreleaser --snapshot --rm-dist
 
 buildtestsnapshot:
-	goreleaser --snapshot --rm-dist --skip-publish
+	GOVERSION=$(GOVERSION) goreleaser --snapshot --rm-dist --skip-publish
 
 checks: checktest checkmeta checkbats
 

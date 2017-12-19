@@ -12,12 +12,13 @@ import (
 )
 
 var (
-	version = "v?.?.?"
-	date    = "????-??-??"
+	date      = "????-??-??"
+	goVersion = "go?.?.?"
+	version   = "v?.?.?"
 )
 
 func main() {
-	app := datautils.DefaultApp(version, date)
+	app := datautils.DefaultApp(version, date, goVersion)
 	app.Name = "rows"
 	app.Usage = "select lines from text files"
 

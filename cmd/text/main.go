@@ -13,12 +13,13 @@ import (
 )
 
 var (
-	version = "v?.?.?"
-	date    = "????-??-??"
+	date      = "????-??-??"
+	goVersion = "go?.?.?"
+	version   = "v?.?.?"
 )
 
 func main() {
-	app := datautils.DefaultApp(version, date)
+	app := datautils.DefaultApp(version, date, goVersion)
 	app.Name = "text"
 	app.Usage = "manipulate content from text files"
 

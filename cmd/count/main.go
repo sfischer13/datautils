@@ -14,12 +14,13 @@ import (
 )
 
 var (
-	version = "v?.?.?"
-	date    = "????-??-??"
+	date      = "????-??-??"
+	goVersion = "go?.?.?"
+	version   = "v?.?.?"
 )
 
 func main() {
-	app := datautils.DefaultApp(version, date)
+	app := datautils.DefaultApp(version, date, goVersion)
 	app.Name = "count"
 	app.Usage = "count lines from text files"
 

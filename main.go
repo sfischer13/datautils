@@ -26,10 +26,10 @@ func processStdin(c *cli.Context, process func(string) error) error {
 	return err
 }
 
-func DefaultApp(version, date string) *cli.App {
+func DefaultApp(version, date, goVersion string) *cli.App {
 	app := cli.NewApp()
 	dateTime := ParseRFCDate(date).Format("2006-01-02")
-	app.Version = fmt.Sprintf("%s (%s)", version, dateTime)
+	app.Version = fmt.Sprintf("%s (%s, %s)", version, dateTime, goVersion)
 	app.Copyright = "Copyright (c) 2017 Stefan Fischer"
 	app.Author = "Stefan Fischer"
 	app.Email = "sfischer13@ymail.com"

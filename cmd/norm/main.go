@@ -13,12 +13,13 @@ import (
 )
 
 var (
-	version = "v?.?.?"
-	date    = "????-??-??"
+	date      = "????-??-??"
+	goVersion = "go?.?.?"
+	version   = "v?.?.?"
 )
 
 func main() {
-	app := datautils.DefaultApp(version, date)
+	app := datautils.DefaultApp(version, date, goVersion)
 	app.Name = "norm"
 	app.Usage = "normalize text files into Unicode normal forms"
 
