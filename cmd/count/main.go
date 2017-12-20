@@ -19,17 +19,11 @@ var (
 )
 
 func main() {
-	app := cli.NewApp()
+	app := datautils.DefaultApp(version, date)
 	app.Name = "count"
-	dateTime := datautils.ParseRFCDate(date).Format("2006-01-02 15:04:05")
-	app.Version = fmt.Sprintf("%s (%s)", version, dateTime)
 	app.Usage = "count lines from text files"
-	app.Copyright = "Copyright (c) 2017 Stefan Fischer"
-	app.Author = "Stefan Fischer"
-	app.Email = "sfischer13@ymail.com"
 
 	app.Commands = []cli.Command{}
-	app.HideHelp = true
 
 	app.Flags = []cli.Flag{
 		cli.BoolFlag{

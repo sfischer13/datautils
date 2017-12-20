@@ -26,6 +26,17 @@ func processStdin(c *cli.Context, process func(string) error) error {
 	return err
 }
 
+func DefaultApp(version, date string) *cli.App {
+	app := cli.NewApp()
+	dateTime := ParseRFCDate(date).Format("2006-01-02")
+	app.Version = fmt.Sprintf("%s (%s)", version, dateTime)
+	app.Copyright = "Copyright (c) 2017 Stefan Fischer"
+	app.Author = "Stefan Fischer"
+	app.Email = "sfischer13@ymail.com"
+	app.HideHelp = true
+	return app
+}
+
 // TransformStdin applies a string transformation function to stdin.
 func TransformStdin(c *cli.Context, transform func(string) string) error {
 	process := func(s string) error {
