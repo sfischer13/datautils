@@ -37,6 +37,7 @@ script:
 
 after_success:
   - test "$TRAVIS_GO_VERSION" = "1.9" && $GOPATH/bin/goveralls -service=travis-ci
+  - echo "$TRAVIS_GO_VERSION"
 
 notifications:
   email:
