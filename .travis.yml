@@ -22,9 +22,9 @@ addons:
       - bats
 
 before_install:
-  - wget https://github.com/alecthomas/gometalinter/releases/download/v2.0.2/gometalinter-v2.0.2-linux-amd64.tar.bz2
-  - tar xjvf gometalinter-v2.0.2-linux-amd64.tar.bz2
-  - export PATH=$PATH:$PWD/gometalinter-v2.0.2-linux-amd64:$PWD/gometalinter-v2.0.2-linux-amd64/linters
+  - wget https://github.com/alecthomas/gometalinter/releases/download/v2.0.5/gometalinter-2.0.5-linux-amd64.tar.gz
+  - tar xzvf gometalinter-2.0.5-linux-amd64.tar.gz
+  - export PATH=$PATH:$PWD/gometalinter-2.0.5-linux-amd64:$PWD/gometalinter-2.0.5-linux-amd64/linters
   - go get github.com/mattn/goveralls
 
 install:
