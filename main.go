@@ -26,6 +26,7 @@ func processStdin(c *cli.Context, process func(string) error) error {
 	return err
 }
 
+// DefaultApp TODO
 func DefaultApp(version, date, goVersion string) *cli.App {
 	app := cli.NewApp()
 	dateTime := ParseRFCDate(date).Format("2006-01-02")

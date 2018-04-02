@@ -12,12 +12,14 @@ var reRangeS = regexp.MustCompile(`^(\d*)$`)
 var reRangeM = regexp.MustCompile(`^(\d*):(\d*)$`)
 var reRangeL = regexp.MustCompile(`^(\d*):(\d*):(\d*)$`)
 
+// Interval TODO
 type Interval struct {
 	Low  int64
 	High int64
 	Step int64
 }
 
+// NewInterval TODO
 func NewInterval(low, high, step string) Interval {
 	if low == "" {
 		low = "1"
@@ -44,10 +46,12 @@ func NewInterval(low, high, step string) Interval {
 	}
 }
 
+// Contains TODO
 func (r *Interval) Contains(i int64) bool {
 	return (i >= r.Low) && (i <= r.High) && (((i - r.Low) % r.Step) == 0)
 }
 
+// String2Intervals TODO
 func String2Intervals(s string) []Interval {
 	if reRanges.MatchString(s) {
 		result := []Interval{}
@@ -75,6 +79,7 @@ func String2Intervals(s string) []Interval {
 	return nil
 }
 
+// Intervals2Func TODO
 func Intervals2Func(rs []Interval) func(int64) bool {
 	return func(i int64) bool {
 		result := false
