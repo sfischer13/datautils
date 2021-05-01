@@ -55,6 +55,40 @@ These tools are part of the collection:
 ### count
 
 ```shell
+$ echo "a\na\na\nb\nb\nc"
+a
+a
+a
+b
+b
+c
+```
+
+```shell
+$ echo "a\na\na\nb\nb\nc" | count --keys
+3	a
+2	b
+1	c
+```
+
+```shell
+$ echo "a\na\na\nb\nb\nc" | count --counts
+1	c
+2	b
+3	a
+```
+
+```shell
+$ echo "a\na\na\nb\nb\nc" | count --flip
+a	3
+b	2
+c	1
+```
+
+```shell
+$ echo "a\na\na\nb\nb\nc" | count --threshold 2
+3	a
+2	b
 ```
 
 ### norm
@@ -62,7 +96,9 @@ These tools are part of the collection:
 ```shell
 $ echo "¹²³" | norm --nfc
 ¹²³
+```
 
+```shell
 $ echo "¹²³" | norm --nfkc
 123
 ```
@@ -70,17 +106,40 @@ $ echo "¹²³" | norm --nfkc
 ### rows
 
 ```shell
+echo "a\nb\nc\nd\ne" | rows --rows 2:4
+b
+c
+d
+```
+
+```shell
+echo "a\nb\nc\nd\ne" | rows --rows 1,5
+a
+e
 ```
 
 ### text
 
 ```shell
+$ echo abca | text chars
+a
+b
+c
+a
+```
+
+```shell
+$ echo "This is a test." | text words
+This
+is
+a
+test.
 ```
 
 ### trim
 
 ```shell
-$ echo "   abc" | trim -l
+$ echo "   abc" | trim --left
 abc
 ```
 
