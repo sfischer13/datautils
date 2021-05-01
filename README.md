@@ -15,6 +15,17 @@ The best toolbox for processing textual data.
 
 ---
 
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Tools](#tools)
+- [Usage](#usage)
+  - [count](#count)
+  - [norm](#norm)
+  - [rows](#rows)
+  - [text](#text)
+  - [trim](#trim)
+- [Credits](#credits)
+
 ## Introduction
 
 The *Data Utilities* are a collection of handy text manipulation tools. These tools are supposed to make a [data wrangler](https://en.wikipedia.org/wiki/Data_wrangling)’s life on the command-line easier.
