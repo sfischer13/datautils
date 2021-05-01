@@ -15,7 +15,7 @@ The best toolbox for processing textual data.
 
 ---
 
-## Introduction & Rationale
+## Introduction
 
 The *Data Utilities* are a collection of handy text manipulation tools. These tools are supposed to make a [data wrangler](https://en.wikipedia.org/wiki/Data_wrangling)’s life on the command-line easier.
 
@@ -25,13 +25,11 @@ On the other hand, some of the tools fix actual problems. The tools use [UTF-8](
 
 ## Installation
 
-### go get
-
 ```shell
 go get -v github.com/sfischer13/datautils/...
 ```
 
-## Tool Overview
+## Tools
 
 These tools are part of the collection:
 
@@ -41,7 +39,7 @@ These tools are part of the collection:
 -   `text`
 -   `trim`
 
-## Usage Examples
+## Usage
 
 ### count
 
