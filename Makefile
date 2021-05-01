@@ -1,4 +1,4 @@
-.PHONY: all build buildsnapshot buildtestsnapshot checks checktest checkmeta checkbats clean distclean gobuild goget goinstall list man manclean show
+.PHONY: all build buildsnapshot buildtestsnapshot checks checktest checklint checkbats clean distclean gobuild goget goinstall list man manclean show
 
 # targets
 CMDS = count norm rows text trim
@@ -35,13 +35,13 @@ buildsnapshot:
 buildtestsnapshot:
 	GOVERSION=$(GOVERSION) goreleaser --snapshot --rm-dist --skip-publish
 
-checks: checktest checkmeta checkbats
+checks: checktest checklint checkbats
 
 checktest:
 	go test -v -race $(shell go list ./... | grep -v '/vendor/')
 
-checkmeta:
-	gometalinter --vendor --enable-all --line-length=100 ./...
+checklint:
+	golangci-lint run --enable-all --sort-results --verbose
 
 checkbats:
 	bats test/
