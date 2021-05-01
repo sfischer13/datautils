@@ -9,7 +9,7 @@ datautils
 The best toolbox for processing textual data.
 </p>
 <p align="center">
-<a href="https://github.com/sfischer13/datautils/releases"><img alt="Release" src="https://img.shields.io/github/release/sfischer13/datautils.svg?style=flat-square"></a> <a href="https://github.com/sfischer13/datautils/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/sfischer13/datautils.svg?style=flat-square"></a> <a href="https://travis-ci.org/sfischer13/datautils"><img alt="Travis" src="https://img.shields.io/travis/sfischer13/datautils.svg?style=flat-square"></a> <a href="https://coveralls.io/github/sfischer13/datautils"><img alt="Coverage Status" src="https://coveralls.io/repos/github/sfischer13/datautils/badge.svg"/></a> <a href="https://goreportcard.com/report/github.com/sfischer13/datautils"><img alt="Go Report Card" src="https://goreportcard.com/badge/github.com/sfischer13/datautils?style=flat-square"></a>
+<a href="https://github.com/sfischer13/datautils/releases"><img alt="Release" src="https://img.shields.io/github/release/sfischer13/datautils.svg?style=flat-square"></a> <a href="https://github.com/sfischer13/datautils/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/sfischer13/datautils.svg?style=flat-square"></a> <a href="https://goreportcard.com/report/github.com/sfischer13/datautils"><img alt="Go Report Card" src="https://goreportcard.com/badge/github.com/sfischer13/datautils?style=flat-square"></a>
 </p>
 </p>
 
