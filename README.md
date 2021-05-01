@@ -69,28 +69,6 @@ abc
 
 ## Installation
 
-### Debian & Ubuntu
-
-#### snap
-
-```shell
-sudo apt-get install snapd
-sudo snap install --channel=candidate datautils
-sudo snap alias datautils.norm count
-sudo snap alias datautils.norm norm
-sudo snap alias datautils.norm rows
-sudo snap alias datautils.norm text
-sudo snap alias datautils.trim trim
-```
-
-#### apt
-
-```shell
-sudo add-apt-repository ppa:sfischer13/datautils
-sudo apt-get update
-sudo apt-get install datautils
-```
-
 ### Developers
 
 #### go get
