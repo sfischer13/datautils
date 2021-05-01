@@ -1,4 +1,4 @@
-.PHONY: all build buildsnapshot buildtestsnapshot checks checktest checkmeta checkbats clean distclean gobuild goget goinstall man manclean show
+.PHONY: all build buildsnapshot buildtestsnapshot checks checktest checkmeta checkbats clean distclean gobuild goget goinstall list man manclean show
 
 # targets
 CMDS = count norm rows text trim
@@ -60,6 +60,9 @@ goget:
 
 goinstall:
 	go install ./...
+
+list:
+	go list -m all
 
 man: $(GZS)
 
