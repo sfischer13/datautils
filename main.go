@@ -1,4 +1,4 @@
-// Copyright (c) 2017 Stefan Fischer
+// Copyright (c) 2017–2021 Stefan Fischer
 // Use of this code is governed by the MIT license, which can be found in the LICENSE file.
 
 package datautils
@@ -31,7 +31,7 @@ func DefaultApp(version, date, goVersion string) *cli.App {
 	app := cli.NewApp()
 	dateTime := ParseRFCDate(date).Format("2006-01-02")
 	app.Version = fmt.Sprintf("%s (%s, %s)", version, dateTime, goVersion)
-	app.Copyright = "Copyright (c) 2017 Stefan Fischer"
+	app.Copyright = "Copyright (c) 2017–2021 Stefan Fischer"
 	app.Author = "Stefan Fischer"
 	app.Email = "sfischer13@ymail.com"
 	app.HideHelp = true

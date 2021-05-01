@@ -55,7 +55,7 @@ Written by Stefan Fischer <sfischer13@ymail.com>.
 
 # COPYRIGHT
 
-Copyright © 2017 Stefan Fischer\
+Copyright © 2017–2021 Stefan Fischer\
 Licensed under the MIT License.
 
 This is free software and there is NO WARRANTY.

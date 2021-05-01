@@ -1,4 +1,4 @@
-// Copyright (c) 2017 Stefan Fischer
+// Copyright (c) 2017–2021 Stefan Fischer
 // Use of this code is governed by the MIT license, which can be found in the LICENSE file.
 
 package main
