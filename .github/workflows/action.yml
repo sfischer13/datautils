@@ -13,15 +13,20 @@ jobs:
     name: Go ${{ matrix.go-version }} @ ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: false
       - uses: actions/setup-go@v2
         with:
           go-version: ${{ matrix.go-version }}
-      - run: go version
-      - run: go build -v ./...
-      - run: go test -v -race ./...
+      - run: |
+          go version
+          go build -v ./...
+          go test -v -race ./...
       - uses: golangci/golangci-lint-action@v2
         with:
           args: --sort-results --verbose ./...
-      - run: |
+      - name: Bats (!= windows-latest)
+        if: matrix.os != 'windows-latest'
+        env:
+          NPM_CONFIG_PREFIX: "~/.npm-global"
+        run: |
+          npm install --global bats@1.3.0
+          ~/.npm-global/bin/bats bats/
