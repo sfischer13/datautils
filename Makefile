@@ -44,7 +44,7 @@ checklint:
 	golangci-lint run --enable-all --sort-results --verbose
 
 checkbats:
-	bats test/
+	bats bats/
 
 clean: buildclean manclean
 
