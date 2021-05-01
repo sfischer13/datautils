@@ -15,6 +15,11 @@ The best toolbox for processing textual data.
 
 ---
 
+## Contents
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Tools](#tools)
@@ -25,6 +30,8 @@ The best toolbox for processing textual data.
   - [text](#text)
   - [trim](#trim)
 - [Credits](#credits)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Introduction
 
