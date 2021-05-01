@@ -23,6 +23,14 @@ Much of the functionality can be solved with standard command-line tools (`awk`,
 
 On the other hand, some of the tools fix actual problems. The tools use [UTF-8](https://en.wikipedia.org/wiki/UTF-8) by default. As a consequence, one does not have to deal with the quirks of `sort` and `uniq` w.r.t. non-ASCII input.
 
+## Installation
+
+### go get
+
+```shell
+go get -v github.com/sfischer13/datautils/...
+```
+
 ## Tool Overview
 
 These tools are part of the collection:
@@ -65,14 +73,6 @@ $ echo "¹²³" | norm --nfkc
 ```shell
 $ echo "   abc" | trim -l
 abc
-```
-
-## Installation
-
-### go get
-
-```shell
-go get -v github.com/sfischer13/datautils/...
 ```
 
 ## Credits
