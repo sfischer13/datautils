@@ -69,22 +69,10 @@ abc
 
 ## Installation
 
-### Developers
-
-#### go get
+### go get
 
 ```shell
-go get github.com/sfischer13/datautils/...
-```
-
-#### go dep
-
-```shell
-go get -u github.com/golang/dep/cmd/dep
-git clone https://github.com/sfischer13/datautils.git
-cd datautils
-dep ensure
-go install
+go get -v github.com/sfischer13/datautils/...
 ```
 
 ## Credits
